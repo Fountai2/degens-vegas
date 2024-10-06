@@ -10,4 +10,4 @@
     // output: "standalone", // bulkier but supports dynamic routes & api
 }
 
-module.exports = nextConfig
+export default nextConfig
