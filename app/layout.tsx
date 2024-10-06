@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Degens Do Loas Vegas",
+  title: "Degens Do Las Vegas",
   description: "Vegas Degens Compendium",
 };
 
