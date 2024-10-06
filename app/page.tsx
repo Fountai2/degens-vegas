@@ -62,7 +62,6 @@ function a11yProps(index: number) {
   };
 }
 
-
 export default function Home() {
   const [value, setValue] = React.useState(0);
   const eventCategories: Record<string, any> = vegasData; 
