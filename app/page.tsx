@@ -117,7 +117,7 @@ export default function Home() {
                 <p><strong>Hours: </strong> 
                 {Object.entries(event.hours[0]).map(([day, hours], i) => (
                     <span key={i}>
-                      {day}: {hours}
+                      {day}: {String(hours)}
                       <br />
                       </span>
                   ))}
