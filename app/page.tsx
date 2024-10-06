@@ -8,10 +8,17 @@ import SwipeableViews from 'react-swipeable-views';
 
 import { MapPinIcon, HomeIcon, BuildingStorefrontIcon, BeakerIcon, FilmIcon, InformationCircleIcon } from '@heroicons/react/24/solid'
 
+// This block defines each item in my json for typescript usage
 interface Event {
   name: string;
   location?: string;
   map_link?: string;
+  hours?: Array<{ [day: string]: string }>; // Array of objects with day names as keys
+  cost?: number;
+  cost_low?: number;
+  cost_high?: number;
+  website?: string;
+  menu?: string;
 }
 
 interface EventCategories {
@@ -20,11 +27,11 @@ interface EventCategories {
 }
 
 const tabIcons: { [key: string]: JSX.Element } = {
-  "Information": <HomeIcon className="h-5 w-5" />,
+  "Information": <InformationCircleIcon className="h-5 w-5" />,
   "Entertainment": <HomeIcon className="h-5 w-5" />,
-  "dining": <BuildingStorefrontIcon className="h-5 w-5" />,
-  "drinking": <BeakerIcon className="h-5 w-5" />,
-  "shows": <FilmIcon className="h-5 w-5" />,
+  "Dining": <BuildingStorefrontIcon className="h-5 w-5" />,
+  "Drinking": <BeakerIcon className="h-5 w-5" />,
+  "Shows": <FilmIcon className="h-5 w-5" />,
 };
 
 interface TabPanelProps {
@@ -94,7 +101,7 @@ export default function Home() {
           <h1>{category}</h1>
           {Array.isArray(eventCategories[category]) && eventCategories[category].map((event, eventIndex) => (
             <Box key={eventIndex} sx={{mb: 2}}>
-              <h2>{event.name}</h2>
+              <h3>{event.name}</h3>
               {event.location && event.map_link && (
               <p><strong>Location: </strong> 
               <a href={event.map_link}
@@ -106,10 +113,13 @@ export default function Home() {
                 {event.location}
               </a>
               </p>)}
-              {event.hours && (
+              {event.hours && event.hours.length > 0 && (
                 <p><strong>Hours: </strong> 
                 {Object.entries(event.hours[0]).map(([day, hours], i) => (
-                    <span key={i}>{day} {event.hours}<br /></span>
+                    <span key={i}>
+                      {day}: {hours}
+                      <br />
+                      </span>
                   ))}
                 </p>
               )}
