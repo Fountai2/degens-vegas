@@ -1,0 +1,48 @@
+{
+  "things to see": 
+    [
+      {
+        "name": "Meow Wolf",
+        "location": "3215 S Rancho Dr, Las Vegas, NV 89102",
+        "hours_open": 1100,
+        "hours_close": 2300,
+        "cost": 64,
+        "website": "https://tickets.meowwolf.com/las-vegas/"
+      }
+    ],
+  "dining": [
+    {
+      "name": "Best Friend",
+        "location": "3215 S Rancho Dr, Las Vegas, NV 89102",
+        "hours": [
+          {
+            "Monday to Thursday": "4:00 PM to 11:00 PM",
+            "Friday to Saturday": "4:00 PM to 12:00 AM",
+            "Sunday": "4:00 PM to 11:00 PM"
+          }
+          ],
+        "cost_low": 30,
+        "cost_high": 120,
+        "website": "https://parkmgm.mgmresorts.com/en/restaurants/best-friend.html",
+        "menu": "https://www.thelasvegasreport.com/wp-content/uploads/2023/03/best-friend-menu-park-mgm-las-vegas.pdf"
+    }],
+  "drinking": [
+    {
+      "name": "Chandelier Bar",
+        "location": "3215 S Rancho Dr, Las Vegas, NV 89102",
+        "hours_open": 1100,
+        "hours_close": 2300,
+        "cost": 64,
+        "website": "https://tickets.meowwolf.com/las-vegas/"
+    }],
+  "shows": [
+    {
+    "name": "Knights Vs Utah",
+        "location": "3215 S Rancho Dr, Las Vegas, NV 89102",
+        "hours_open": 1100,
+        "hours_close": 2300,
+        "cost": 64,
+        "website": "https://tickets.meowwolf.com/las-vegas/"
+  }]
+  }
+  

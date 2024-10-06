@@ -1,0 +1,100 @@
+{
+    "Information": 
+    [
+      {
+        "name": "Degens Do Vegas! 11/1 - 11/4"
+        }
+    ],
+    "Entertainment": 
+    [
+      {
+        "name": "Meow Wolf",
+        "map_link": "https://maps.app.goo.gl/PoeWKNcaod2u6yEr9",
+        "location": "Area 15",
+        "hours": [
+            { "" : "11:00 AM to 11:00 PM"}],
+        "cost": 64,
+        "website": "https://tickets.meowwolf.com/las-vegas/"
+      }
+    ],
+  "Dining": [
+    {
+        "name": "Best Friend",
+        "map_link" : "https://maps.app.goo.gl/7P2hT2c7sWrWJEdy9",
+        "location": "Park MGM",
+        "hours": [
+          {
+            "Monday to Thursday": "4:00 PM to 11:00 PM",
+            "Friday to Saturday": "4:00 PM to 12:00 AM",
+            "Sunday": "4:00 PM to 11:00 PM"
+          }
+          ],
+        "cost_low": 30,
+        "cost_high": 120,
+        "website": "https://parkmgm.mgmresorts.com/en/restaurants/best-friend.html",
+        "menu": "https://www.thelasvegasreport.com/wp-content/uploads/2023/03/best-friend-menu-park-mgm-las-vegas.pdf"
+    },
+    {
+        "name": "Rí Rá Irish Pub ",
+        "map_link" : "https://maps.app.goo.gl/V6dSoaBFkPhaMGx87",
+        "location": "The Shoppes at Mandalay Bay",
+        "hours": [
+          {
+            "All Week": "8:00 AM to 12:00 AM"
+          }
+          ],
+        "cost_low": 30,
+        "cost_high": 120,
+        "website": "https://rira.com/las-vegas/",
+        "menu": "https://rira.com/las-vegas/food-and-drink/food-menus/dinner/"
+    }],
+  "Drinking": [
+    {
+      "name": "Chandelier Bar",
+        "location": "The Cosmopolitan",
+        "hours": [
+            { "" : "11:00 AM to 11:00 PM"}],
+        "website": "https://tickets.meowwolf.com/las-vegas/"
+    }, 
+    {
+        "name": "Ghost Donkey",
+          "location": "Cosmopolitan - Behind Lardo",
+          "hours_open": 1600,
+          "hours_close": 200,
+          "website": "https://www.ghostdonkey.com/"
+      },
+      {
+        "name": "Ski Lodge",
+          "location": "Near Wicked Spoon",
+          "hours_open": 1200,
+          "hours_close": 200,
+          "website": "https://spiegelworld.com/restaurants/ski-lodge/"
+      }
+    ],
+  "Shows": [
+    {
+        "name": "Tournament of Kings",
+        "map_link": "https://maps.app.goo.gl/vb5cELSg9ZV4Kdee7",   
+        "location": "Excalibur",
+        "Date and Time": "8:30 PM Friday",
+        "cost": 75,
+        "website": "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html"
+
+      },
+    {
+    "name": "VGK vs UTAH",
+    "map_link": "https://maps.app.goo.gl/vb5cELSg9ZV4Kdee7",   
+    "location": "TMobile Arena",
+    "Date and Time": "7:00 PM Saturday",
+    "cost_low": 100,
+    "cost_high": 140
+  },
+  {
+    "name": "Legerdemain (cocktails+magic)",
+    "map_link": "https://maps.app.goo.gl/NVkVb3KhgVfSgid8A",   
+    "location": "The Venetian",
+    "Date and Time": "7:00 PM Sunday",
+    "cost": 120,
+    "website": "https://www.1923lv.com/entertainment-venetian/legerdemain/"
+  }]
+  }
