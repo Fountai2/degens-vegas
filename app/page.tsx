@@ -8,8 +8,19 @@ import SwipeableViews from 'react-swipeable-views';
 
 import { MapPinIcon, HomeIcon, BuildingStorefrontIcon, BeakerIcon, FilmIcon, InformationCircleIcon } from '@heroicons/react/24/solid'
 
-const tabIcons = {
-  "Information": <InformationCircleIcon className="h-5 w-5" />,
+interface Event {
+  name: string;
+  location?: string;
+  map_link?: string;
+}
+
+interface EventCategories {
+  Information: string;
+  [key: string]: string | Event[]; // This allows for new, dynamic categories
+}
+
+const tabIcons: { [key: string]: JSX.Element } = {
+  "Information": <HomeIcon className="h-5 w-5" />,
   "Entertainment": <HomeIcon className="h-5 w-5" />,
   "dining": <BuildingStorefrontIcon className="h-5 w-5" />,
   "drinking": <BeakerIcon className="h-5 w-5" />,
@@ -47,15 +58,16 @@ function a11yProps(index: number) {
 
 export default function Home() {
   const [value, setValue] = React.useState(0);
-  const eventCategories = vegasData;
+  const eventCategories: Record<string, any> = vegasData; 
   const categories = Object.keys(eventCategories);
   const x = Object(eventCategories);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue)
   }
-  const handleChangeIndex = (index) => {
+  const handleChangeIndex = (index: React.SetStateAction<number>) => {
     setValue(index);
   };
+
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -67,6 +79,7 @@ export default function Home() {
           centered
           variant="scrollable"
         >
+          
           {categories.map((category, index) => (
             <Tab key={index} icon={tabIcons[category]} label={category} {...a11yProps(index)} />
           ))}
@@ -96,7 +109,7 @@ export default function Home() {
               {event.hours && (
                 <p><strong>Hours: </strong> 
                 {Object.entries(event.hours[0]).map(([day, hours], i) => (
-                    <span key={i}>{day} {hours}<br /></span>
+                    <span key={i}>{day} {event.hours}<br /></span>
                   ))}
                 </p>
               )}
