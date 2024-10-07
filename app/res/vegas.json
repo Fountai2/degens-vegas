@@ -2,13 +2,22 @@
     "Information": 
     [
       {
-        "name": "Degens Do Vegas! 11/1 - 11/4"
+        "title": "Degens Do Vegas! 11/1 - 11/4",
+        "attendees": [{
+            "name": "Andy",
+            "name": "John",
+            "name": "Tasia + Terran",
+            "name": "JZY + Simone",
+            "name": "Jeremy + Amanda",
+            "name": "Marty + Lindsay"
+        }
+        ]
         }
     ],
     "Entertainment": 
     [
       {
-        "name": "Meow Wolf",
+        "title": "Meow Wolf",
         "map_link": "https://maps.app.goo.gl/PoeWKNcaod2u6yEr9",
         "location": "Area 15",
         "hours": [
@@ -19,7 +28,7 @@
     ],
   "Dining": [
     {
-        "name": "Best Friend",
+        "title": "Best Friend",
         "map_link" : "https://maps.app.goo.gl/7P2hT2c7sWrWJEdy9",
         "location": "Park MGM",
         "hours": [
@@ -35,7 +44,7 @@
         "menu": "https://www.thelasvegasreport.com/wp-content/uploads/2023/03/best-friend-menu-park-mgm-las-vegas.pdf"
     },
     {
-        "name": "Rí Rá Irish Pub ",
+        "title": "Rí Rá Irish Pub ",
         "map_link" : "https://maps.app.goo.gl/V6dSoaBFkPhaMGx87",
         "location": "The Shoppes at Mandalay Bay",
         "hours": [
@@ -50,30 +59,38 @@
     }],
   "Drinking": [
     {
-      "name": "Chandelier Bar",
+      "title": "Chandelier Bar",
+      "map_link": "https://maps.app.goo.gl/v1CszuTRMZrpeKoz8",
         "location": "The Cosmopolitan",
         "hours": [
-            { "" : "11:00 AM to 11:00 PM"}],
+            { "All Week" : "11:00 AM to 11:00 PM"}],
         "website": "https://tickets.meowwolf.com/las-vegas/"
     }, 
     {
-        "name": "Ghost Donkey",
-          "location": "Cosmopolitan - Behind Lardo",
-          "hours_open": 1600,
-          "hours_close": 200,
+        "title": "Ghost Donkey",
+        "map_link": "https://maps.app.goo.gl/RuKnoeALfP2ZZxSG8",
+          "location": "Cosmopolitan Level 2 - Behind Lardo",
+          "hours": [
+            {
+                "Friday - Saturday": "4PM - 2AM",
+                "Sunday":"4:00 PM to 12:00 AM"}
+          ],
           "website": "https://www.ghostdonkey.com/"
       },
       {
-        "name": "Ski Lodge",
-          "location": "Near Wicked Spoon",
-          "hours_open": 1200,
-          "hours_close": 200,
+        "title": "Ski Lodge",
+        "map_link": "https://maps.app.goo.gl/2WhYGfngShKm1pXS6",
+          "location": "Cosmo Level 2 Near Wicked Spoon",
+         "hours": [
+            {
+                "Friday - Sunday": "12PM - 2AM"}
+          ],
           "website": "https://spiegelworld.com/restaurants/ski-lodge/"
       }
     ],
   "Shows": [
     {
-        "name": "Tournament of Kings",
+        "title": "Tournament of Kings",
         "map_link": "https://maps.app.goo.gl/vb5cELSg9ZV4Kdee7",   
         "location": "Excalibur",
         "Date and Time": "8:30 PM Friday",
@@ -82,7 +99,7 @@
 
       },
     {
-    "name": "VGK vs UTAH",
+    "title": "VGK vs UTAH",
     "map_link": "https://maps.app.goo.gl/vb5cELSg9ZV4Kdee7",   
     "location": "TMobile Arena",
     "Date and Time": "7:00 PM Saturday",
@@ -90,7 +107,7 @@
     "cost_high": 140
   },
   {
-    "name": "Legerdemain (cocktails+magic)",
+    "title": "Legerdemain (cocktails+magic)",
     "map_link": "https://maps.app.goo.gl/NVkVb3KhgVfSgid8A",   
     "location": "The Venetian",
     "Date and Time": "7:00 PM Sunday",
