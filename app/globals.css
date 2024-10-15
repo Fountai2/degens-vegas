@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
+  --color-bg: #ffffff;
+  --color-fg: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #ffffff;
-    --foreground: #000000;
+    --color-bg: #ffffff;
+    --color-fg: #000000;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--color-fg);
+  background: var(--color-bg);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -31,6 +31,34 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Global styles */
+.app {
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light theme */
+.app.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark theme */
+.app.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  margin: 1rem;
+  font-size: 1.2rem;
 }
 
 @layer base {

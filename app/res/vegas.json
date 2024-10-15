@@ -23,7 +23,27 @@
         "hours": [
             { "" : "11:00 AM to 11:00 PM"}],
         "cost": 64,
-        "website": "https://tickets.meowwolf.com/las-vegas/"
+        "website": "https://tickets.meowwolf.com/las-vegas/",
+        "image": "https://fabulousnevada.com/wp-content/uploads/sites/7/2022/05/meow-wolf-las-vegas-omega-mart-5.jpg"
+      },
+      {
+        "title": "Fremont Street / Old Vegas",
+        "map_link": "https://maps.app.goo.gl/o28TGc65JGRtwKEu9",
+        "location": "Fremont Street",
+        "hours": [
+            { "" : "24 hours mostly"}],
+        "website": "https://vegasexperience.com/",
+        "image": "https://vegasexperience.com/wp-content/uploads/2023/12/view-of-the-zipline.jpg"
+      },
+      {
+        "title": "Shark Reef Aquarium",
+        "map_link": "https://maps.app.goo.gl/LXCXLkWbHxgu2jxU8",
+        "location": "Mandalay Bay",
+        "hours": [
+            { "" : "Daily 10AM - 8PM"}],
+        "cost": 29,
+        "website": "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html",
+        "image":"https://i.ytimg.com/vi/MWzLZmH041c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD4dt5lvca8iCm6qqYFnNjxr0JBqQ"
       }
     ],
   "Dining": [

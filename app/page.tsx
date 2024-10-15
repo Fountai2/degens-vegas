@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -12,6 +12,8 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { ThemeProvider, createTheme, CssBaseline, useMediaQuery, CardMedia } from '@mui/material';
+
 
 
 import { MapPinIcon, HomeIcon, BuildingStorefrontIcon, BeakerIcon, FilmIcon, InformationCircleIcon } from '@heroicons/react/24/solid'
@@ -101,6 +103,34 @@ function a11yProps(index: number) {
 }
 
 export default function Home() {
+
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const [darkMode, setDarkMode] = useState(prefersDarkMode);
+  // Create MUI theme based on the mode
+  const theme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: darkMode ? 'dark' : 'light',
+        },
+      }),
+    [darkMode]
+  );
+
+ // Detect system/browser theme preference on initial render
+ useEffect(() => {
+  const matchMedia = window.matchMedia('(prefers-color-scheme: dark)');
+  setDarkMode(matchMedia.matches); // Set initial state
+
+  // Listen for changes in system/browser theme preference
+  const handleChange = (event: MediaQueryListEvent) => {
+    setDarkMode(event.matches);
+  };
+  matchMedia.addEventListener('change', handleChange);
+
+  return () => matchMedia.removeEventListener('change', handleChange);
+}, []);
+
   const [expanded, setExpanded] = React.useState<{ [key: number]: boolean}>({});
   const handleExpandClick = (index: number) => {
     setExpanded((prevState) => ({
@@ -121,6 +151,15 @@ export default function Home() {
 
 
   return (
+    <ThemeProvider theme ={theme}>
+      <CssBaseline />
+      <div className={`app ${darkMode ? 'dark' : 'light'}`}>
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          className="theme-toggle"
+        >
+          Toggle Theme
+        </button>
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs
@@ -144,12 +183,31 @@ export default function Home() {
         <CustomTabPanel key={index} value={value} index={index}> 
           <h1>{category}</h1>
           {Array.isArray(eventCategories[category]) && eventCategories[category].map((event, eventIndex) => (
-            <Card sx={{ minWidth: 275 }}>
-            <CardContent>
+            <Card sx={{ minWidth: 275,
+              display: "flex",
+              flexDirection: "column",
+              my:2,
+              justifyContent: 'space-between'
+             }}>
+            <CardContent >
+              
               
             <Box key={eventIndex} sx={{mb: 2}}>
               
               <h3>{event.title}</h3>
+              {event.image && (
+              <CardMedia
+                component="img"
+                image={event.image}
+                sx={{
+                  width: '80%', // Make the image responsive
+                  display:"block",
+                  margin:"auto",
+                  maxHeight: 200, // Restrict the height
+                  objectFit: 'cover', // Maintain aspect ratio
+                  borderRadius: 5, // Optional: Add rounded corners
+                }} 
+            />)}
               {event.location && event.map_link && (
               <p><strong>Location: </strong> 
               <a href={event.map_link}
@@ -204,5 +262,7 @@ export default function Home() {
       ))}
         </SwipeableViews>
       </Box>
+      </div>
+      </ThemeProvider>
        );
 };
