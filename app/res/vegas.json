@@ -1,19 +1,31 @@
 {
-    "Information": 
-    [
-      {
-        "title": "Degens Do Vegas! 11/1 - 11/4",
-        "attendees": [{
-            "name": "Andy",
-            "name": "John",
-            "name": "Tasia + Terran",
-            "name": "JZY + Simone",
-            "name": "Jeremy + Amanda",
-            "name": "Marty + Lindsay"
-        }
-        ]
-        }
-    ],
+    "Shows": [
+    {
+        "title": "Tournament of Kings",
+        "map_link": "https://maps.app.goo.gl/vb5cELSg9ZV4Kdee7",   
+        "location": "Excalibur",
+        "Date and Time": "8:30 PM Friday",
+        "cost": 75,
+        "website": "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html",
+        "image": "https://cdn.getyourguide.com/img/tour/6e2666761b878122.jpeg/145.jpg"
+
+      },
+    {
+    "title": "VGK vs UTAH",
+    "map_link": "https://maps.app.goo.gl/vb5cELSg9ZV4Kdee7",   
+    "location": "TMobile Arena",
+    "Date and Time": "7:00 PM Saturday",
+    "image":"https://images.discovery-prod.axs.com/2019/07/vegas-golden-knights_07-30-19_19_5d40ae462eda1.jpg"
+  },
+  {
+    "title": "Legerdemain (cocktails+magic)",
+    "map_link": "https://maps.app.goo.gl/NVkVb3KhgVfSgid8A",   
+    "location": "The Venetian",
+    "Date and Time": "7:00 PM Sunday",
+    "cost": 120,
+    "website": "https://www.1923lv.com/entertainment-venetian/legerdemain/",
+    "image": "https://www.1923lv.com/wp-content/uploads/2022/04/19233-1.jpeg"
+  }],
     "Entertainment": 
     [
       {
@@ -107,31 +119,5 @@
           ],
           "website": "https://spiegelworld.com/restaurants/ski-lodge/"
       }
-    ],
-  "Shows": [
-    {
-        "title": "Tournament of Kings",
-        "map_link": "https://maps.app.goo.gl/vb5cELSg9ZV4Kdee7",   
-        "location": "Excalibur",
-        "Date and Time": "8:30 PM Friday",
-        "cost": 75,
-        "website": "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html"
-
-      },
-    {
-    "title": "VGK vs UTAH",
-    "map_link": "https://maps.app.goo.gl/vb5cELSg9ZV4Kdee7",   
-    "location": "TMobile Arena",
-    "Date and Time": "7:00 PM Saturday",
-    "cost_low": 100,
-    "cost_high": 140
-  },
-  {
-    "title": "Legerdemain (cocktails+magic)",
-    "map_link": "https://maps.app.goo.gl/NVkVb3KhgVfSgid8A",   
-    "location": "The Venetian",
-    "Date and Time": "7:00 PM Sunday",
-    "cost": 120,
-    "website": "https://www.1923lv.com/entertainment-venetian/legerdemain/"
-  }]
+    ]
   }

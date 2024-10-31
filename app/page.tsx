@@ -219,44 +219,38 @@ export default function Home() {
                 {event.location}
               </a>
               </p>)}
-              <CardActions>
-              <ExpandMore
-                        expand={expanded[eventIndex] || false}
-                        onClick={() => handleExpandClick(eventIndex)}
-                        aria-expanded={expanded[eventIndex] || false}
-                        aria-label="show more"
-                      >
-                <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-              <Collapse in={expanded[eventIndex] || false} timeout="auto" unmountOnExit>
-              <CardContent>
-              {event.hours && event.hours.length > 0 && (
-                <p><strong>Hours: </strong> 
-                {Object.entries(event.hours[0]).map(([day, hours], i) => (
-                    <span key={i}>
-                      {day}: {String(hours)}
-                      <br />
+                <CardContent>
+                {/* Display either hours or date and time, depending on what is available */}
+                {event.hours && event.hours.length > 0 ? (
+                  <p>
+                    <strong>Hours:</strong>{' '}
+                    {Object.entries(event.hours[0]).map(([day, hours], i) => (
+                      <span key={i}>
+                        {day}: {String(hours)}
+                        <br />
                       </span>
-                  ))}
-                </p>
-              )}
-              {event.cost && (
-              <p><strong>Cost:</strong> ${event.cost || `${event.cost_low} - ${event.cost_high}`}</p>
-              )}
-              
-              <a href={event.website} target="_blank" rel="noopener noreferrer">Visit Website</a>
-              {event.menu && (
-                <>
-                  <br />
-                  <a href={event.menu} target="_blank" rel="noopener noreferrer">View Menu</a>
-                </>
-               
-              )}
-              </CardContent>
-              </Collapse>
+                    ))}
+                  </p>
+                ) : event["Date and Time"] ? (
+                  <p>
+                    <strong>Date and Time:</strong> {event["Date and Time"]}
+                  </p>
+                ) : null}
+                {event.cost && (
+                <p><strong>Cost:</strong> ${event.cost || `${event.cost_low} - ${event.cost_high}`}</p>
+                )}
+                <a href={event.website} target="_blank" rel="noopener noreferrer">Visit Website</a>
+                {event.menu && (
+                  <>
+                    <br />
+                    <a href={event.menu} target="_blank" rel="noopener noreferrer">View Menu</a>
+                  </>
+                
+                )}
+                </CardContent>
             </Box>
-            </CardContent></Card>   
+            </CardContent>
+            </Card>   
           ))}  
       </CustomTabPanel>
       ))}
