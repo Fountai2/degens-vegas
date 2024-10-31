@@ -5,6 +5,10 @@
 :root {
   --color-bg: #ffffff;
   --color-fg: #000000;
+  --link-color-light: #1a0dab;
+  --link-hover-color-light: #4a0eeb;
+  --link-color-dark: #85c1ff;
+  --link-hover-color-dark: #a9d6ff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -59,6 +63,34 @@ body {
   cursor: pointer;
   margin: 1rem;
   font-size: 1.2rem;
+}
+
+/* Light theme */
+.link {
+  color: #1a0dab; /* Light theme blue hyperlink color */
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #4a0eeb; /* Darker blue on hover */
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --link-color: #85c1ff;
+    --link-hover-color: #a9d6ff;
+  }
+
+  .link {
+    color: var(--link-color); /* Lighter blue for dark theme */
+  }
+
+  .link:hover {
+    color: var(--link-hover-color);
+  }
 }
 
 @layer base {

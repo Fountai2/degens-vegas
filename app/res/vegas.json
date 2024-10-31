@@ -5,7 +5,8 @@
         "map_link": "https://maps.app.goo.gl/vb5cELSg9ZV4Kdee7",   
         "location": "Excalibur",
         "Date and Time": "8:30 PM Friday",
-        "cost": 75,
+        "TeamDinner": "Ri Ra (Tram Ride from Excalibur)",
+        "DinnerSite":"https://rira.com/las-vegas/food-and-drink/food-menus/dinner/",
         "website": "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html",
         "image": "https://cdn.getyourguide.com/img/tour/6e2666761b878122.jpeg/145.jpg"
 
@@ -22,7 +23,8 @@
     "map_link": "https://maps.app.goo.gl/NVkVb3KhgVfSgid8A",   
     "location": "The Venetian",
     "Date and Time": "7:00 PM Sunday",
-    "cost": 120,
+    "TeamDinner": "Black Tap (Venetian)",
+    "DinnerSite":"https://blacktap.com/location/vegas/",
     "website": "https://www.1923lv.com/entertainment-venetian/legerdemain/",
     "image": "https://www.1923lv.com/wp-content/uploads/2022/04/19233-1.jpeg"
   }],
@@ -60,6 +62,22 @@
     ],
   "Dining": [
     {
+      "title": "The Black Tap",
+      "map_link" : "https://maps.app.goo.gl/7P2hT2c7sWrWJEdy9",
+      "location": "Venetian",
+      "hours": [
+        {
+          "Sunday to Thursday": "11:00 AM to 11:00 PM",
+          "Friday to Saturday": "11:00 AM to 12:00 AM"
+        }
+        ],
+      "cost_low": 10,
+      "cost_high": 40,
+      "website": "https://blacktap.com/location/vegas/",
+      "menu": "https://blacktap.com/restaurant-menu/las-vegas/",
+      "image": "https://i.ytimg.com/vi/0INzqDu8CTE/maxresdefault.jpg"
+  },
+    {
         "title": "Best Friend",
         "map_link" : "https://maps.app.goo.gl/7P2hT2c7sWrWJEdy9",
         "location": "Park MGM",
@@ -73,7 +91,8 @@
         "cost_low": 30,
         "cost_high": 120,
         "website": "https://parkmgm.mgmresorts.com/en/restaurants/best-friend.html",
-        "menu": "https://www.thelasvegasreport.com/wp-content/uploads/2023/03/best-friend-menu-park-mgm-las-vegas.pdf"
+        "menu": "https://www.thelasvegasreport.com/wp-content/uploads/2023/03/best-friend-menu-park-mgm-las-vegas.pdf",
+        "image": "https://i.ytimg.com/vi/Y4wii0D9Lmk/sddefault.jpg"
     },
     {
         "title": "Rí Rá Irish Pub ",
@@ -87,7 +106,8 @@
         "cost_low": 30,
         "cost_high": 120,
         "website": "https://rira.com/las-vegas/",
-        "menu": "https://rira.com/las-vegas/food-and-drink/food-menus/dinner/"
+        "menu": "https://rira.com/las-vegas/food-and-drink/food-menus/dinner/",
+        "image": "https://m.vegas.com/media/vegas/nightlife/bars/las-vegas-strip/ri-ra/rira-2014-mobileimage.jpg"
     }],
   "Drinking": [
     {

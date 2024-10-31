@@ -239,13 +239,22 @@ export default function Home() {
                 {event.cost && (
                 <p><strong>Cost:</strong> ${event.cost || `${event.cost_low} - ${event.cost_high}`}</p>
                 )}
-                <a href={event.website} target="_blank" rel="noopener noreferrer">Visit Website</a>
+                <a href={event.website} target="_blank" rel="noopener noreferrer" className="link">Visit Website</a>
                 {event.menu && (
                   <>
                     <br />
-                    <a href={event.menu} target="_blank" rel="noopener noreferrer">View Menu</a>
+                    <a href={event.menu} target="_blank" rel="noopener noreferrer" className="link">View Menu</a>
                   </>
                 
+                )}
+                {/* Shows Tab specific field */}
+                {event.TeamDinner && event.DinnerSite && (
+                  <p>
+                    <strong>Team Dinner: </strong> 
+                    <a href={event.DinnerSite} target="_blank" rel="noopener noreferrer" className="link">
+                      {event.TeamDinner}
+                    </a>
+                  </p>
                 )}
                 </CardContent>
             </Box>
